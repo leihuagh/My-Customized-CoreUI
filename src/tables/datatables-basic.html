@@ -1830,16 +1830,27 @@
         $(document).ready(function() {
             $('#example').DataTable({
                 dom: "lBfrtip",
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ],
-                initComplete: function() {
-                    $('.buttons-copy').html('<i class="fa fa-copy" />')
-                    $('.buttons-csv').html('<i class="fa fa-file-text-o" />')
-                    $('.buttons-excel').html('<i class="fa fa-file-excel-o" />')
-                    $('.buttons-pdf').html('<i class="fa fa-file-pdf-o" />')
-                    $('.buttons-print').html('<i class="fa fa-print" />')
-                },
+                buttons: [{
+                    extend: 'copyHtml5',
+                    text: '<i class="fa fa-files-o"></i>',
+                    titleAttr: 'Copy'
+                }, {
+                    extend: 'excelHtml5',
+                    text: '<i class="fa fa-file-excel-o"></i>',
+                    titleAttr: 'Excel'
+                }, {
+                    extend: 'csvHtml5',
+                    text: '<i class="fa fa-file-text-o"></i>',
+                    titleAttr: 'CSV'
+                }, {
+                    extend: 'pdfHtml5',
+                    text: '<i class="fa fa-file-pdf-o"></i>',
+                    titleAttr: 'PDF'
+                }, {
+                    extend: 'print',
+                    text: '<i class="fa fa-print"></i>',
+                    titleAttr: 'Print'
+                }],
                 responsive: true,
                 columnDefs: [{
                     responsivePriority: 1,
