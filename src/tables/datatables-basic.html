@@ -1586,7 +1586,16 @@
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#example').DataTable({
+                responsive: true,
+                columnDefs: [{
+                    responsivePriority: 1,
+                    targets: 0
+                }, {
+                    responsivePriority: 2,
+                    targets: -1
+                }]
+            });
         });
     </script>
 </body>
