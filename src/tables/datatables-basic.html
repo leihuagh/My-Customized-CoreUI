@@ -1837,19 +1837,35 @@
                 }, {
                     extend: 'excelHtml5',
                     text: '<i class="fa fa-file-excel-o"></i>',
-                    titleAttr: 'Excel'
+                    titleAttr: 'Excel',
+                    title: 'Insurance Companies',
+                    exportOptions: {
+                        columns: ':not(:last-child)',
+                    }
                 }, {
                     extend: 'csvHtml5',
                     text: '<i class="fa fa-file-text-o"></i>',
-                    titleAttr: 'CSV'
+                    titleAttr: 'CSV',
+                    title: 'Insurance Companies',
+                    exportOptions: {
+                        columns: ':not(:last-child)',
+                    }
                 }, {
                     extend: 'pdfHtml5',
                     text: '<i class="fa fa-file-pdf-o"></i>',
-                    titleAttr: 'PDF'
+                    titleAttr: 'PDF',
+                    title: 'Insurance Companies',
+                    exportOptions: {
+                        columns: ':not(:last-child)',
+                    }
                 }, {
                     extend: 'print',
                     text: '<i class="fa fa-print"></i>',
-                    titleAttr: 'Print'
+                    titleAttr: 'Print',
+                    title: 'Insurance Companies',
+                    exportOptions: {
+                        columns: ':not(:last-child)',
+                    }
                 }],
                 responsive: true,
                 columnDefs: [{
